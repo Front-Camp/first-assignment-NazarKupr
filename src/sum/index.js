@@ -18,7 +18,7 @@ const sum = (a, b) => {
 };
 
 const isNumeric = number => {
-  return !isNaN(parseFloat(number)) && isFinite(number);
+  return !isNaN(number) && isFinite(number) && typeof number === 'number';
 }
 
 export default sum;

@@ -8,11 +8,10 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  /* if (data === null) {
+  if(Array.isArray(data)) {
     return false;
   }
-
-  return ((typeof data === 'function')|| (typeof data === 'object')); */
+  
   return data === Object(data);
 };
 
