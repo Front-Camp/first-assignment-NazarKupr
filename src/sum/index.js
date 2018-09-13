@@ -10,7 +10,15 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if(!isNumeric(a) || !isNumeric(b)) {
+    throw new Error('');
+  }
+
+  return a + b;
 };
+
+const isNumeric = number => {
+  return !isNaN(parseFloat(number)) && isFinite(number);
+}
 
 export default sum;

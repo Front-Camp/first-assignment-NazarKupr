@@ -7,7 +7,19 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  /* your logic here...*/
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (isNumeric(arr[i]) && arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
 };
+
+const isNumeric = number => {
+  return !isNaN(parseFloat(number)) && isFinite(number);
+}
 
 export default max;

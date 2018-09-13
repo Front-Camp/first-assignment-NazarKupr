@@ -6,7 +6,14 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let arrayToAdd = arr[i].flags;
+
+    result.push(...arrayToAdd);
+  }
+
+  return result.sort();
 };
 
 export default getFlags;
